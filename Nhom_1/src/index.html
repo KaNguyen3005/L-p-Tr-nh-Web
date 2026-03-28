@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+ <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+<body class="font-sans h-screen">
+
+  <!-- NAVBAR -->
+  <nav class="bg-blue-600 px-6 py-3 flex items-center justify-between">
+    <span class="text-white font-bold text-lg">MySite</span>
+
+    <!-- Mobile: ẩn menu, hiện icon hamburger -->
+    <div class="md:hidden text-white text-2xl cursor-pointer">&#9776;</div>
+
+    <!-- Desktop: hiện menu -->
+    <ul class="hidden md:flex gap-6 text-white text-sm">
+      <li><a href="#" class="hover:underline">Home</a></li>
+      <li><a href="#" class="hover:underline">About</a></li>
+      <li><a href="#" class="hover:underline">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <main class="flex flex-col md:flex-row items-center justify-center gap-8 px-10 py-16 h-full">
+
+    <!-- Logo -->
+    <div class="flex-shrink-0">
+      <img
+        src="data:image/jpeg;base64,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6Q5z9Igc8k9/VfKi126qrIqypoKWaqhx4U8kLXPZg5GHEZGDypiIPOpp4aqB8FVDHNDINr45GhzXD0IPBUdlqtzLebcy30jaE5zTCFoiOTk/RxjvypiIPGkpaeip2U9HBFTwM+CKJgY1vOeAOByvKO12+OvfcI6ClbWyDD6lsLRI4YA5djJ4A+wKWiCLcbbQ3SnNNc6Onq4Cc+HPEHtz64Ki0enLHRUk1JSWeghp5xiWJlMwNk/SGOfmrREHjSUlNQ07Kaip4qeBmdsULAxrcnJwBx3JVfctMWC6VH3zcrLb6qf+tmpmOcfrJGSrZEHlS01PR07KejgiggjGGRRMDWtHoAOAq646YsF0qfvm42W31U/nLNTMc4/WSOVbIg86anhpYGQUsMcMMYwyONoa1o9AB2VVWaT05XVbqutsNsnqHnL5ZKVjnOPqSRz81cog/McbIo2xxMaxjRhrWjAA9AF+kRAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQf//Z"
+        alt="Tailwind CSS Logo"
+        class="w-56 md:w-64"
+      />
+    </div>
+
+    <!-- Text + Button -->
+    <div class="text-center md:text-left">
+      <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-2">
+        Learn Tailwind CSS
+      </h2>
+      <p class="text-gray-500 mb-4 text-sm md:text-base">
+        Build responsive layouts quickly with utility-first CSS.
+      </p>
+      <button
+        class="bg-blue-600 text-white px-5 py-2 rounded text-sm
+               hover:bg-blue-800 transition-colors duration-200"
+      >
+        Get Started
+      </button>
+    </div>
+
+  </main>
+
+</body>
+</html>
